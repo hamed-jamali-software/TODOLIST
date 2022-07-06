@@ -22,13 +22,15 @@ public class LoadBaseData {
     public static final Logger LOGGER = LoggerFactory.getLogger(LoadBaseData.class);
 
 
+    @Autowired
+    BaseDataRepository repository;
 
     @Bean
     CommandLineRunner initDatabase(  ){
 
         return  args -> {
             LOGGER.info("load"  );
-         //   LOGGER.info("Preloading" + repository.saveAll(addAll()));
+             LOGGER.info("Preloading" + repository.saveAll(addAll()));
         };
     }
 

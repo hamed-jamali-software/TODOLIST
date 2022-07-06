@@ -11,8 +11,8 @@ import java.util.List;
 @Service
 public class BaseDataService {
 
-    //@Autowired
-    private BaseDataRepository baseDataRepository;
+      @Autowired
+      BaseDataRepository baseDataRepository;
 
     public BaseData addBaseData (BaseData baseData){
 
@@ -23,7 +23,7 @@ public class BaseDataService {
         return baseDataRepository.findAll();
     }
 
-    public void deleteBaseData(int id){
+    public void deleteBaseData(long id){
           baseDataRepository.deleteById(id);
     }
 

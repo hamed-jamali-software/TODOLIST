@@ -22,14 +22,14 @@ public class Task {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private  int id ;
+    private  Long id ;
 
     @OneToOne
     @JoinColumn(name = "idBaseData", referencedColumnName = "id")
     private BaseData baseData;
 
-    @Column
-    private int idBaseData;
+    @Column(name = "idBaseData",updatable = false,insertable = false)
+    private Long idBaseData;
 
 
     //@Temporal(TemporalType.DATE)

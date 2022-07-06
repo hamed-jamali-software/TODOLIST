@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 
 @Repository
-public interface TaskRepository extends JpaRepository<Task, Integer> {
+public interface TaskRepository extends JpaRepository<Task, Long> {
 
 
 }

@@ -6,6 +6,5 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@EnableJpaRepositories(basePackageClasses = BaseDataRepository.class)
-public interface BaseDataRepository extends JpaRepository<BaseData, Integer> {
+public interface BaseDataRepository extends JpaRepository<BaseData, Long> {
 }
